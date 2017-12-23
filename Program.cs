@@ -196,6 +196,7 @@ namespace serverstatus
                 else
                 {
                     Pool.PoolSize = RoleIndex + 1;
+                    WorldEntering.SelectedIndex = RoleIndex;
                 }
 
                 Pool.Enabled &= RoleCreate;
