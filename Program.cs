@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -145,7 +145,7 @@ namespace serverstatus
             Param("Host", gs.ToString());
             Param("Login", Login);
             Param("Password", Password);
-            Param("Version", "1.1");
+            Param("Version", "1.2");
             Param("Author", "freepvps");
         }
 
@@ -192,6 +192,10 @@ namespace serverstatus
                 {
                     WorldEntering.Enabled = false;
                     Pool.Enabled = false;
+                }
+                else
+                {
+                    Pool.PoolSize = RoleIndex + 1;
                 }
 
                 Pool.Enabled &= RoleCreate;
